@@ -126,7 +126,6 @@ Class averages:
 ---
 
 ### 5. `pascals_triangle(rows)`
-**Difficulty:** ⭐⭐⭐ Hard
 
 Generate a specific row of Pascal's triangle using the formula: **p(n, k) = n! / (k! × (n-k)!)**
 
