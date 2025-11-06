@@ -12,19 +12,6 @@ def draw_square(size:int, filled=False, char="*")-> str:
     """
     pass
 
-def draw_triangle(size:int, filled=False,char="*") -> str:
-    """
-    This function draws a triangle of given size.
-
-    Args:
-        size (int): size of the triangle (height).
-        filled (bool, optional): If True, the triangle is filled. Defaults to False.
-        char (str, optional): Character used to draw the triangle. Defaults to "*".
-
-    Returns:
-        str:    A string representation of the triangle.
-    """
-    pass
     
 def draw_number_triangle(height:int)->str:
     """
@@ -107,9 +94,6 @@ def pascals_triangle(rows:int)->list[int]:
     
     
 def main():
-    print("----Christmas Tree----")
-    print(draw_triangle(5,True,"^"))
-
     chars = ['#', '*', '+', '@', '%']
     for i in range(3,8):
         print(draw_square(i,False,char=chars[i-3]))
