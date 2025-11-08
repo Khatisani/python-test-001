@@ -10,7 +10,7 @@ from main import (
     draw_number_triangle,
     factorial,
     bar_graph,
-    # pascals_triangle
+    pascals_triangle
 )
 
 
@@ -167,55 +167,55 @@ class TestBarGraph(unittest.TestCase):
         self.assertIn("2: ***", result)
 
 
-# class TestPascalsTriangle(unittest.TestCase):
-#     """Test cases for pascals_triangle function"""
+class TestPascalsTriangle(unittest.TestCase):
+    """Test cases for pascals_triangle function"""
     
-#     def test_row_zero(self):
-#         """Test row 0: [1]"""
-#         result = pascals_triangle(0)
-#         expected = [1]
-#         self.assertEqual(result, expected)
+    def test_row_zero(self):
+        """Test row 0: [1]"""
+        result = pascals_triangle(0)
+        expected = [1]
+        self.assertEqual(result, expected)
     
-#     def test_row_one(self):
-#         """Test row 1: [1, 1]"""
-#         result = pascals_triangle(1)
-#         expected = [1, 1]
-#         self.assertEqual(result, expected)
+    def test_row_one(self):
+        """Test row 1: [1, 1]"""
+        result = pascals_triangle(1)
+        expected = [1, 1]
+        self.assertEqual(result, expected)
     
-#     def test_row_two(self):
-#         """Test row 2: [1, 2, 1]"""
-#         result = pascals_triangle(2)
-#         expected = [1, 2, 1]
-#         self.assertEqual(result, expected)
+    def test_row_two(self):
+        """Test row 2: [1, 2, 1]"""
+        result = pascals_triangle(2)
+        expected = [1, 2, 1]
+        self.assertEqual(result, expected)
     
-#     def test_row_five(self):
-#         """Test row 5: [1, 5, 10, 10, 5, 1]"""
-#         result = pascals_triangle(5)
-#         expected = [1, 5, 10, 10, 5, 1]
-#         self.assertEqual(result, expected)
+    def test_row_five(self):
+        """Test row 5: [1, 5, 10, 10, 5, 1]"""
+        result = pascals_triangle(5)
+        expected = [1, 5, 10, 10, 5, 1]
+        self.assertEqual(result, expected)
     
-#     def test_row_four(self):
-#         """Test row 4: [1, 4, 6, 4, 1]"""
-#         result = pascals_triangle(4)
-#         expected = [1, 4, 6, 4, 1]
-#         self.assertEqual(result, expected)
+    def test_row_four(self):
+        """Test row 4: [1, 4, 6, 4, 1]"""
+        result = pascals_triangle(4)
+        expected = [1, 4, 6, 4, 1]
+        self.assertEqual(result, expected)
     
-#     def test_row_six(self):
-#         """Test row 6: [1, 6, 15, 20, 15, 6, 1]"""
-#         result = pascals_triangle(6)
-#         expected = [1, 6, 15, 20, 15, 6, 1]
-#         self.assertEqual(result, expected)
+    def test_row_six(self):
+        """Test row 6: [1, 6, 15, 20, 15, 6, 1]"""
+        result = pascals_triangle(6)
+        expected = [1, 6, 15, 20, 15, 6, 1]
+        self.assertEqual(result, expected)
     
-#     def test_symmetry(self):
-#         """Test that Pascal's triangle row is symmetric"""
-#         result = pascals_triangle(7)
-#         self.assertEqual(result, result[::-1])
+    def test_symmetry(self):
+        """Test that Pascal's triangle row is symmetric"""
+        result = pascals_triangle(7)
+        self.assertEqual(result, result[::-1])
     
-#     def test_length(self):
-#         """Test that row n has n+1 elements"""
-#         for n in range(8):
-#             result = pascals_triangle(n)
-#             self.assertEqual(len(result), n + 1)
+    def test_length(self):
+        """Test that row n has n+1 elements"""
+        for n in range(8):
+            result = pascals_triangle(n)
+            self.assertEqual(len(result), n + 1)
 
 
 if __name__ == '__main__':

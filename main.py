@@ -102,29 +102,34 @@ def bar_graph()->str:
     return graph
 
 
-# def pascals_triangle(rows:int)->list[int]:
-#     """ p(n, k) = n! / (k! * (n-k)!)
+def pascals_triangle(rows:int)->list[int]:
+    """ p(n, k) = n! / (k! * (n-k)!)
     
     
-#     n: number of rows starting from 0
-#     k: column number starting from 0
-#     i.e 
-#     rows 
-#     0:              1
-#     1:            1   1
-#     2:          1   2   1
-#     3:        1   3   3   1
-#     4:      1   4   6   4   1
-#     5:    1  5  10  10   5   1
-#     6:  1  6  15  20  15   6   1
-#     7:1  7 21  35  35  21   7   1
+    n: number of rows starting from 0
+    k: column number starting from 0
+    i.e 
+    rows 
+    0:              1
+    1:            1   1
+    2:          1   2   1
+    3:        1   3   3   1
+    4:      1   4   6   4   1
+    5:    1  5  10  10   5   1
+    6:  1  6  15  20  15   6   1
+    7:1  7 21  35  35  21   7   1
     
-#     example:
-#         pascals_triangle(5)
-#         returns [1, 5, 10, 10, 5, 1]
-#         using 'p(n, k) = n! / (k! * (n-k)!)'
-#     """
-#     pass
+    example:
+        pascals_triangle(5)
+        returns [1, 5, 10, 10, 5, 1]
+        using 'p(n, k) = n! / (k! * (n-k)!)'
+    """
+    pass
+    # triangle = []
+    #row1 = 1
+    #build row using prev, start at 1, end at 1, sum of 2 number above
+    #add row to triangle
+    #return last row as string
 
     
 def main():
@@ -134,9 +139,9 @@ def main():
         
     print()
     print(draw_number_triangle(6))
-#     print(factorial(5))
-#     print()
-#     print(pascals_triangle(5))
+    print(factorial(5))
+    print()
+    print(pascals_triangle(5))
     print(bar_graph())
     print()
  
