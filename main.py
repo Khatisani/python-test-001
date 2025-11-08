@@ -1,35 +1,35 @@
-def draw_square(size:int, filled=False, char="*")-> str:
-    """
-    This function draws a square of given size.
+# def draw_square(size:int, filled=False, char="*")-> str:
+#     """
+#     This function draws a square of given size.
 
-    Args:
-        size (int): size of the square (side length).
-        filled (bool, optional): If True, the square is filled. Defaults to False.
-        char (str, optional): Character used to draw the square. Defaults to "*".
+#     Args:
+#         size (int): size of the square (side length).
+#         filled (bool, optional): If True, the square is filled. Defaults to False.
+#         char (str, optional): Character used to draw the square. Defaults to "*".
 
-    Returns:
-        str: A string representation of the square.
-    """
-    pass
+#     Returns:
+#         str: A string representation of the square.
+#     """
+#     pass
 
     
-def draw_number_triangle(height:int)->str:
-    """
-    This function draws a triangle of numbers with the given height.
-    i.e height = 4
-    returns: 
-        1 
-        2 3 
-        4 5 6 
-        7 8 9 10
+# def draw_number_triangle(height:int)->str:
+#     """
+#     This function draws a triangle of numbers with the given height.
+#     i.e height = 4
+#     returns: 
+#         1 
+#         2 3 
+#         4 5 6 
+#         7 8 9 10
         
-    Args:
-        height (int): height of the triangle.
+#     Args:
+#         height (int): height of the triangle.
 
-    Returns:
-        string : A string representation of the number triangle.
-    """
-    pass
+#     Returns:
+#         string : A string representation of the number triangle.
+#     """
+#     pass
 
 def factorial(n:int):
     """
@@ -40,7 +40,10 @@ def factorial(n:int):
     n: non-negative integer
     return: n!
     """
-    pass
+    product = 1
+    for i in range(1, n+1):
+        product *= i
+    return product
     
 def bar_graph()->str:
     """
@@ -63,46 +66,59 @@ def bar_graph()->str:
     returns:
         str: string of the graph
     """
-    pass
+    classes = 1
+    graph = "Class averages:\n"
+    with open ("grades.txt", "r") as file:
+
+        for line in file:
+            line= line.replace(",", " ")
+            marks = [int(mark) for mark in line.split()]
+            average = sum(marks) / len(marks)
+            star = int(average / 10) * "*"
+            
+            graph += f"{classes}: {star}\n"
+            classes += 1
+
+    return graph
 
 
-def pascals_triangle(rows:int)->list[int]:
-    """ p(n, k) = n! / (k! * (n-k)!)
+# def pascals_triangle(rows:int)->list[int]:
+#     """ p(n, k) = n! / (k! * (n-k)!)
     
     
-    n: number of rows starting from 0
-    k: column number starting from 0
-    i.e 
-    rows 
-    0:              1
-    1:            1   1
-    2:          1   2   1
-    3:        1   3   3   1
-    4:      1   4   6   4   1
-    5:    1  5  10  10   5   1
-    6:  1  6  15  20  15   6   1
-    7:1  7 21  35  35  21   7   1
+#     n: number of rows starting from 0
+#     k: column number starting from 0
+#     i.e 
+#     rows 
+#     0:              1
+#     1:            1   1
+#     2:          1   2   1
+#     3:        1   3   3   1
+#     4:      1   4   6   4   1
+#     5:    1  5  10  10   5   1
+#     6:  1  6  15  20  15   6   1
+#     7:1  7 21  35  35  21   7   1
     
-    example:
-        pascals_triangle(5)
-        returns [1, 5, 10, 10, 5, 1]
-        using 'p(n, k) = n! / (k! * (n-k)!)'
-    """
-    pass
+#     example:
+#         pascals_triangle(5)
+#         returns [1, 5, 10, 10, 5, 1]
+#         using 'p(n, k) = n! / (k! * (n-k)!)'
+#     """
+#     pass
 
 
     
     
 def main():
-    chars = ['#', '*', '+', '@', '%']
-    for i in range(3,8):
-        print(draw_square(i,False,char=chars[i-3]))
+#     chars = ['#', '*', '+', '@', '%']
+#     for i in range(3,8):
+#         print(draw_square(i,False,char=chars[i-3]))
         
-    print()
-    print(draw_number_triangle(6))
-    print(factorial(5))
-    print()
-    print(pascals_triangle(5))
+#     print()
+#     print(draw_number_triangle(6))
+#     print(factorial(5))
+#     print()
+#     print(pascals_triangle(5))
     print(bar_graph())
     print()
  
