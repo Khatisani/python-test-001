@@ -21,27 +21,35 @@ def draw_square(size:int, filled=False, char="*")-> str:
         square.append(row)
 
     return "\n".join(square) + "\n"
-
-    
-
-    
-# def draw_number_triangle(height:int)->str:
-#     """
-#     This function draws a triangle of numbers with the given height.
-#     i.e height = 4
-#     returns: 
-#         1 
-#         2 3 
-#         4 5 6 
-#         7 8 9 10
+  
+def draw_number_triangle(height:int)->str:
+    """
+    This function draws a triangle of numbers with the given height.
+    i.e height = 4
+    returns: 
+        1 
+        2 3 
+        4 5 6 
+        7 8 9 10
         
-#     Args:
-#         height (int): height of the triangle.
+    Args:
+        height (int): height of the triangle.
 
-#     Returns:
-#         string : A string representation of the number triangle.
-#     """
-#     pass
+    Returns:
+        string : A string representation of the number triangle.
+    """
+    triangle = []
+    number = 1
+    for i in range(height):
+        digits = []
+        for j in range(i):
+            digits.append(str(number + j) + " ")
+
+        row = "".join(digits)
+        triangle.append(row)
+        number += i
+
+    return "\n".join(triangle) + "\n"
 
 def factorial(n:int):
     """
@@ -118,16 +126,14 @@ def bar_graph()->str:
 #     """
 #     pass
 
-
-    
     
 def main():
     chars = ['#', '*', '+', '@', '%']
     for i in range(3,8):
         print(draw_square(i,False,char=chars[i-3]))
         
-#     print()
-#     print(draw_number_triangle(6))
+    print()
+    print(draw_number_triangle(6))
 #     print(factorial(5))
 #     print()
 #     print(pascals_triangle(5))

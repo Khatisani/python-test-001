@@ -7,7 +7,7 @@ import sys
 # Assuming the solution is in a file called 'solution.py'
 from main import (
     draw_square,
-    # draw_number_triangle,
+    draw_number_triangle,
     factorial,
     bar_graph,
     # pascals_triangle
@@ -53,33 +53,33 @@ class TestDrawSquare(unittest.TestCase):
         expected = "**\n**\n"
         self.assertEqual(result, expected)
 
-# class TestDrawNumberTriangle(unittest.TestCase):
-#     """Test cases for draw_number_triangle function"""
+class TestDrawNumberTriangle(unittest.TestCase):
+    """Test cases for draw_number_triangle function"""
     
-#     def test_height_four(self):
-#         """Test the example case from docstring"""
-#         result = draw_number_triangle(4)
-#         expected = "\n1 \n2 3 \n4 5 6 \n"
-#         self.assertEqual(result, expected)
+    def test_height_four(self):
+        """Test the example case from docstring"""
+        result = draw_number_triangle(4)
+        expected = "\n1 \n2 3 \n4 5 6 \n"
+        self.assertEqual(result, expected)
     
-#     def test_height_one(self):
-#         """Test edge case: height 1"""
-#         result = draw_number_triangle(1)
-#         expected = "\n"
-#         self.assertEqual(result, expected)
+    def test_height_one(self):
+        """Test edge case: height 1"""
+        result = draw_number_triangle(1)
+        expected = "\n"
+        self.assertEqual(result, expected)
     
-#     def test_height_five(self):
-#         """Test height 5"""
-#         result = draw_number_triangle(5)
-#         expected = "\n1 \n2 3 \n4 5 6 \n7 8 9 10 \n"
-#         self.assertEqual(result, expected)
+    def test_height_five(self):
+        """Test height 5"""
+        result = draw_number_triangle(5)
+        expected = "\n1 \n2 3 \n4 5 6 \n7 8 9 10 \n"
+        self.assertEqual(result, expected)
     
-#     def test_line_count(self):
-#         """Test that the number of lines matches height"""
-#         result = draw_number_triangle(6)
-#         lines = result.split('\n')
-#         # Should have height + 1 lines (including final newline)
-#         self.assertEqual(len(lines), 7)
+    def test_line_count(self):
+        """Test that the number of lines matches height"""
+        result = draw_number_triangle(6)
+        lines = result.split('\n')
+        # Should have height + 1 lines (including final newline)
+        self.assertEqual(len(lines), 7)
 
 
 class TestFactorial(unittest.TestCase):
