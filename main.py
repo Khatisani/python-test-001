@@ -1,16 +1,28 @@
-# def draw_square(size:int, filled=False, char="*")-> str:
-#     """
-#     This function draws a square of given size.
+def draw_square(size:int, filled=False, char="*")-> str:
+    """
+    This function draws a square of given size.
 
-#     Args:
-#         size (int): size of the square (side length).
-#         filled (bool, optional): If True, the square is filled. Defaults to False.
-#         char (str, optional): Character used to draw the square. Defaults to "*".
+    Args:
+        size (int): size of the square (side length).
+        filled (bool, optional): If True, the square is filled. Defaults to False.
+        char (str, optional): Character used to draw the square. Defaults to "*".
 
-#     Returns:
-#         str: A string representation of the square.
-#     """
-#     pass
+    Returns:
+        str: A string representation of the square.
+    """
+    square = []
+
+    for i in range(size):
+        if filled or i ==0 or i == size -1 :
+            row = size * char
+        else:
+            spaces = size - 2
+            row = char + " " * spaces + char
+        square.append(row)
+
+    return "\n".join(square) + "\n"
+
+    
 
     
 # def draw_number_triangle(height:int)->str:
@@ -110,9 +122,9 @@ def bar_graph()->str:
     
     
 def main():
-#     chars = ['#', '*', '+', '@', '%']
-#     for i in range(3,8):
-#         print(draw_square(i,False,char=chars[i-3]))
+    chars = ['#', '*', '+', '@', '%']
+    for i in range(3,8):
+        print(draw_square(i,False,char=chars[i-3]))
         
 #     print()
 #     print(draw_number_triangle(6))

@@ -6,7 +6,7 @@ import sys
 # Import the functions to test
 # Assuming the solution is in a file called 'solution.py'
 from main import (
-    # draw_square,
+    draw_square,
     # draw_number_triangle,
     factorial,
     bar_graph,
@@ -14,44 +14,44 @@ from main import (
 )
 
 
-# class TestDrawSquare(unittest.TestCase):
-#     """Test cases for draw_square function"""
+class TestDrawSquare(unittest.TestCase):
+    """Test cases for draw_square function"""
     
-#     def test_small_filled_square(self):
-#         """Test a small 3x3 filled square"""
-#         result = draw_square(3, filled=True)
-#         expected = "***\n***\n***\n"
-#         self.assertEqual(result, expected)
+    def test_small_filled_square(self):
+        """Test a small 3x3 filled square"""
+        result = draw_square(3, filled=True)
+        expected = "***\n***\n***\n"
+        self.assertEqual(result, expected)
     
-#     def test_small_hollow_square(self):
-#         """Test a small 3x3 hollow square"""
-#         result = draw_square(3, filled=False)
-#         expected = "***\n* *\n***\n"
-#         self.assertEqual(result, expected)
+    def test_small_hollow_square(self):
+        """Test a small 3x3 hollow square"""
+        result = draw_square(3, filled=False)
+        expected = "***\n* *\n***\n"
+        self.assertEqual(result, expected)
     
-#     def test_larger_hollow_square(self):
-#         """Test a 5x5 hollow square"""
-#         result = draw_square(5, filled=False)
-#         expected = "*****\n*   *\n*   *\n*   *\n*****\n"
-#         self.assertEqual(result, expected)
+    def test_larger_hollow_square(self):
+        """Test a 5x5 hollow square"""
+        result = draw_square(5, filled=False)
+        expected = "*****\n*   *\n*   *\n*   *\n*****\n"
+        self.assertEqual(result, expected)
     
-#     def test_custom_character(self):
-#         """Test square with custom character"""
-#         result = draw_square(3, filled=True, char="#")
-#         expected = "###\n###\n###\n"
-#         self.assertEqual(result, expected)
+    def test_custom_character(self):
+        """Test square with custom character"""
+        result = draw_square(3, filled=True, char="#")
+        expected = "###\n###\n###\n"
+        self.assertEqual(result, expected)
     
-#     def test_size_one(self):
-#         """Test edge case: size 1"""
-#         result = draw_square(1, filled=False)
-#         expected = "*\n"
-#         self.assertEqual(result, expected)
+    def test_size_one(self):
+        """Test edge case: size 1"""
+        result = draw_square(1, filled=False)
+        expected = "*\n"
+        self.assertEqual(result, expected)
     
-#     def test_size_two_hollow(self):
-#         """Test edge case: size 2 hollow"""
-#         result = draw_square(2, filled=False)
-#         expected = "**\n**\n"
-#         self.assertEqual(result, expected)
+    def test_size_two_hollow(self):
+        """Test edge case: size 2 hollow"""
+        result = draw_square(2, filled=False)
+        expected = "**\n**\n"
+        self.assertEqual(result, expected)
 
 # class TestDrawNumberTriangle(unittest.TestCase):
 #     """Test cases for draw_number_triangle function"""
